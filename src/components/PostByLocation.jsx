@@ -1,6 +1,6 @@
 import React from "react";
 
-function Navbar() {
+function PostByLocation() {
   return (
     <>
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -28,4 +28,4 @@ function Navbar() {
   );
 }
 
-export default Navbar;
+export default PostByLocation;

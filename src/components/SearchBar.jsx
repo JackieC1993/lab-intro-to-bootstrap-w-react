@@ -1,26 +1,28 @@
 import React, { useState } from "react";
+import { useDeferredValue } from "react";
 
-function SearchBar({ onSearch }) {
-  const [searchText, setSearchText] = useState("");
-
-  const handleSearch = () => {
-    onSearch(searchText);
-  };
-
+function SearchBar({ value, postData, setPost, handlePost }) {
   return (
-    <div className="container mt-4">
-      <div className="input-group">
+    <div>
+      <form className="m-2 d-flex align-items-center">
+        <label htmlFor="inputInfo" className="form-label mr-2">
+          Search posts by Location
+        </label>
         <input
+          value={value}
           type="text"
-          className="form-control"
-          placeholder="Search by title or location"
-          value={searchText}
-          onChange={(e) => setSearchText(e.target.value)}
+          className="d-inline w-50 m-2"
+          id="inputInfo"
+          onChange={(event) => handlePost(event)}
         />
-        <button className="btn btn primary" onClick={handleSearch}>
-          Search
+        <button
+          type="click"
+          className="btn btn-warning m-2"
+          onClick={() => setPost(postData)}
+        >
+          Cancel
         </button>
-      </div>
+      </form>
     </div>
   );
 }

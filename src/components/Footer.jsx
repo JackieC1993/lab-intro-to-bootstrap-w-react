@@ -1,20 +1,21 @@
 import React from "react";
 
-function Footer () {
-    return(
-        <footer className="footer mt-auto py-3 bg-light">
-            <div className="container">
-                <div className="row">
-                    <div className="col-md-6">
-                        <a href="#">Contact me</a> | <a href="#">About the author</a>
-                        </div>
-                        <div className="col-md-6 text-end">
-                            <span>Copyright @ 2023. All rights reserved. </span>
-                    </div>
-                </div>
-            </div>
-        </footer>
-    );
+function Footer() {
+  return (
+    <div className="fixed-bottom border-top text-bg-warning">
+      <div className="m-2 d-flex flex-column">
+        <a href="./contact-info" className="row">
+          Contact Me
+        </a>
+        <a href="./contact-info" className="row">
+          About the Author
+        </a>
+      </div>
+      <div className="text-end">
+        <p className="m-2">Copyright @ 2023. All rights reserved. </p>
+      </div>
+    </div>
+  );
 }
 
 export default Footer;

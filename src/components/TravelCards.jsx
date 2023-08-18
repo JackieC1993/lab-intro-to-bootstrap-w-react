@@ -29,4 +29,4 @@ function Table({ postsData }) {
   );
 }
 
-export default Table;
+export default TravelCards;
